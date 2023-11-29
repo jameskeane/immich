@@ -72,8 +72,6 @@ class _$AppRouter extends RootStackRouter {
           totalAssets: args.totalAssets,
           heroOffset: args.heroOffset,
           showStack: args.showStack,
-          isOwner: args.isOwner,
-          sharedAlbumId: args.sharedAlbumId,
         ),
       );
     },
@@ -775,8 +773,6 @@ class GalleryViewerRoute extends PageRouteInfo<GalleryViewerRouteArgs> {
     required int totalAssets,
     int heroOffset = 0,
     bool showStack = false,
-    bool isOwner = true,
-    String? sharedAlbumId,
   }) : super(
           GalleryViewerRoute.name,
           path: '/gallery-viewer-page',
@@ -787,8 +783,6 @@ class GalleryViewerRoute extends PageRouteInfo<GalleryViewerRouteArgs> {
             totalAssets: totalAssets,
             heroOffset: heroOffset,
             showStack: showStack,
-            isOwner: isOwner,
-            sharedAlbumId: sharedAlbumId,
           ),
         );
 
@@ -803,8 +797,6 @@ class GalleryViewerRouteArgs {
     required this.totalAssets,
     this.heroOffset = 0,
     this.showStack = false,
-    this.isOwner = true,
-    this.sharedAlbumId,
   });
 
   final Key? key;
@@ -819,13 +811,9 @@ class GalleryViewerRouteArgs {
 
   final bool showStack;
 
-  final bool isOwner;
-
-  final String? sharedAlbumId;
-
   @override
   String toString() {
-    return 'GalleryViewerRouteArgs{key: $key, initialIndex: $initialIndex, loadAsset: $loadAsset, totalAssets: $totalAssets, heroOffset: $heroOffset, showStack: $showStack, isOwner: $isOwner, sharedAlbumId: $sharedAlbumId}';
+    return 'GalleryViewerRouteArgs{key: $key, initialIndex: $initialIndex, loadAsset: $loadAsset, totalAssets: $totalAssets, heroOffset: $heroOffset, showStack: $showStack}';
   }
 }
 
